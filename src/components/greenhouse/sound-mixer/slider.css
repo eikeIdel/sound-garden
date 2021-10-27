@@ -1,0 +1,9 @@
+.slider-main{
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.info-button:hover{
+    color:rgb(115, 115, 252);
+}
