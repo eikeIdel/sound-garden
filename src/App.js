@@ -1,13 +1,11 @@
 import './App.css';
-
-
-import Slider from './components/greenhouse/sound-mixer/slider';
+import Greenhouse from './components/greenhouse/greenhouse';
 
 
 function App() {
   return (
     <div className="App">
-      <Slider/>
+      <Greenhouse/>
     </div>
   );
 }

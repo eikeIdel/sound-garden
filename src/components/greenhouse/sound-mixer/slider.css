@@ -1,9 +1,17 @@
 .slider-main{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 0.8rem;
+    max-height: 1.8rem;
 }
 
-.info-button:hover{
-    color:rgb(115, 115, 252);
+.info-button{
+    height:1.2rem;
+}
+
+.info-button > img{
+    max-width:100%;
+    max-height:100%;
+    
 }
