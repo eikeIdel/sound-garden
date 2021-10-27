@@ -1,5 +1,5 @@
-.sound-mixer-main{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.sound-mixer-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

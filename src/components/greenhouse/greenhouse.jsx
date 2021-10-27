@@ -1,10 +1,7 @@
-import SoundMixer from './sound-mixer/sound-mixer'
+import SoundMixer from "./sound-mixer/sound-mixer";
 
-function Greenhouse(){
-    
-    return(
-        <SoundMixer/>
-    )
+function Greenhouse() {
+  return <SoundMixer />;
 }
 
-export default Greenhouse
+export default Greenhouse;

@@ -1,17 +1,16 @@
-.slider-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    max-height: 1.8rem;
+.slider-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  max-height: 1.8rem;
 }
 
-.info-button{
-    height:1.2rem;
+.info-button {
+  height: 1.2rem;
 }
 
-.info-button > img{
-    max-width:100%;
-    max-height:100%;
-    
+.info-button > img {
+  max-width: 100%;
+  max-height: 100%;
 }
