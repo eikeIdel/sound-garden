@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./slider.css";
 
-function Slider() {
+function Slider(props) {
   const [volume, setVolume] = useState(0);
   const [muted, setMuted] = useState(false);
   let finalVolume = muted ? 0 : volume; //volume ** 2
@@ -27,7 +27,7 @@ function Slider() {
       <input
         className="slider"
         type="range"
-        name="--to-do--"
+        name={props.name}
         min={0}
         max={1}
         step={0.02}
@@ -38,6 +38,8 @@ function Slider() {
       />
 
       <p style={{ width: "30px" }}>{parseInt(finalVolume * 100)}%</p>
+      <p style={{width: '60px', fontSize:'0.5rem'}}>Sourcefile:{props.source}</p>
+      {console.log(props)}
     </div>
   );
 }

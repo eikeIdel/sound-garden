@@ -1,11 +1,11 @@
 import './App.css';
-import Greenhouse from './components/greenhouse/greenhouse';
+import HouseATropical from './components/greenhouse/single-houses/HouseATropical';
 
 
 function App() {
   return (
     <div className="App">
-      <Greenhouse/>
+      <HouseATropical/>
     </div>
   );
 }

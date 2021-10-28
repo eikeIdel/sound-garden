@@ -1,13 +1,16 @@
 import Slider from "./slider";
 import "./sound-mixer.css";
+import { soundList } from "./soundList";
 
-function SoundMixer() {
+function SoundMixer(props) {
+
+ 
+
   return (
     <div className="sound-mixer-main">
-      <Slider />
-      <Slider />
-      <Slider />
-      <Slider />
+      {props.soundSelection.map((sound)=>
+      <Slider name={sound} 
+      source={soundList[soundList.findIndex(obj => obj.name === sound)]['source']}/>)}
     </div>
   );
 }
