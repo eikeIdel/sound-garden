@@ -1,17 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import HouseATropical from '../components/greenhouse/single-houses/HouseATropical'
+import Welcome from '../components/welcome.js'
 
 export default function Navigation() {
     return (
         <Router>
             < Link to="/HouseA_Tropical">Greenhouse</Link>
-            
+            < Link to="/Welcome">Welcome</Link>
 
             <Switch>
-                {/* <Route exact path="/">
+                <Route path="/Welcome">
                     <Welcome/>
-                </Route> */}
+                </Route>
             
                 {/* <Route exact path="/Map">
                     <Map/>
