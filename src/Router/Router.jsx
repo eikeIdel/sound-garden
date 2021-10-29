@@ -1,62 +1,66 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import HouseATropical from '../components/greenhouse/single-houses/HouseATropical'
 
-export default function Router() {
+export default function Navigation() {
     return (
         <Router>
-            <Switch>
-                <Route exact path="/">
-                    <Welcome/>
-                </Route>
+            < Link to="/HouseA_Tropical">Greenhouse</Link>
             
-                <Route exact path="/Map">
+
+            <Switch>
+                {/* <Route exact path="/">
+                    <Welcome/>
+                </Route> */}
+            
+                {/* <Route exact path="/Map">
                     <Map/>
-                </Route>
+                </Route> */}
 
                 <Route exact path="/HouseA_Tropical">
-                    <HouseA_Tropical/>
+                    <HouseATropical/>
                 </Route>
-                <Route exact path="/HouseB_Aroids">
-                    <HouseB_Aroids/>
+                {/* <Route exact path="/HouseB_Aroids">
+                    <HouseBAroids/>
                 </Route>
                 <Route exact path="/HouseC_TropicalCrops">
-                    <HouseC_TropicalCrops/>
+                    <HouseCTropicalCrops/>
                 </Route>
                 <Route exact path="/HouseD_Orchids">
-                    <HouseD_Orchids/>
+                    <HouseDOrchids/>
                 </Route>
                 <Route exact path="/House_Rainforest">
-                    <House_Rainforest/>
+                    <HouseRainforest/>
                 </Route>
                 <Route exact path="/HouseF_Ferns">
-                    <HouseF_Ferns/>
+                    <HouseFFerns/>
                 </Route>
                 <Route exact path="/HouseG_Bromeliads">
-                    <HouseG_Bromeliads/>
+                    <HouseGBromeliads/>
                 </Route>
                 <Route exact path="/HouseH_AfricanSucculents">
-                    <HouseH_AfricanSucculents/>
+                    <HouseHAfricanSucculents/>
                 </Route>
                 <Route exact path="/HouseI_Cacti">
-                    <HouseI_Cacti/>
+                    <HouseICacti/>
                 </Route>
                 <Route exact path="/HouseK_SouthAfrica">
-                    <HouseK_SouthAfrica/>
+                    <HouseKSouthAfrica/>
                 </Route>
                 <Route exact path="/HouseL_CarnivorousPlants">
-                    <HouseL_CarnivorousPlants/>
+                    <HouseLCarnivorousPlants/>
                 </Route>
                 <Route exact path="/HouseM_Australia">
-                    <HouseM_Australia/>
+                    <HouseMAustralia/>
                 </Route>
                 <Route exact path="/HouseN_Camellias">
-                    <HouseN_Camellias/>
+                    <HouseNCamellias/>
                 </Route>
                 <Route exact path="/HouseO_VictoriaLilies">
-                    <HouseO_VictoriaLilies/>
+                    <HouseOVictoriaLilies/>
                 </Route>
                 <Route exact path="/HouseP_Mediterranean">
-                    <HouseP_Mediterranean/>
+                    <HousePMediterranean/>
                 </Route>
 
                 <Route exact path="/Quiz">
@@ -65,7 +69,7 @@ export default function Router() {
 
                 <Route exact path="/Backend">
                     <Backend/>
-                </Route>
+                </Route> */}
 
             </Switch>
         </Router>

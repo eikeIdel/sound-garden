@@ -1,11 +1,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Welcome from './components/welcome';
+import Navigation from './Router/Router.jsx';
+
 
 function App() {
   return (
     <div className="App">
-      <Welcome />
+
+
+      <Navigation/>
+
     </div>
   );
 }
