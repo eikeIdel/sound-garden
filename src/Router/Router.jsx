@@ -1,22 +1,26 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import HouseATropical from '../components/greenhouse/single-houses/HouseATropical'
 
-export default function Router() {
+export default function Navigation() {
     return (
         <Router>
-            <Switch>
-                <Route exact path="/">
-                    <Welcome/>
-                </Route>
+            < Link to="/HouseA_Tropical">Greenhouse</Link>
             
-                <Route exact path="/Map">
+
+            <Switch>
+                {/* <Route exact path="/">
+                    <Welcome/>
+                </Route> */}
+            
+                {/* <Route exact path="/Map">
                     <Map/>
-                </Route>
+                </Route> */}
 
                 <Route exact path="/HouseA_Tropical">
                     <HouseATropical/>
                 </Route>
-                <Route exact path="/HouseB_Aroids">
+                {/* <Route exact path="/HouseB_Aroids">
                     <HouseBAroids/>
                 </Route>
                 <Route exact path="/HouseC_TropicalCrops">
@@ -65,7 +69,7 @@ export default function Router() {
 
                 <Route exact path="/Backend">
                     <Backend/>
-                </Route>
+                </Route> */}
 
             </Switch>
         </Router>

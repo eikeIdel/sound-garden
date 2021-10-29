@@ -1,11 +1,12 @@
 import './App.css';
 import HouseATropical from './components/greenhouse/single-houses/HouseATropical';
-import Link from 'react-router-dom';
+
+import Navigation from './Router/Router.jsx';
 
 function App() {
   return (
     <div className="App">
-      < Link to="/HouseA_Tropical">Greenhouse</Link>
+      <Navigation/>
     </div>
   );
 }
