@@ -6,8 +6,11 @@ import Welcome from '../components/welcome';
 export default function Navigation() {
     return (
         <Router>
+            < Link to="/">Welcome</Link>
+             <br/>
             < Link to="/HouseA_Tropical">HouseA - Tropical</Link>
-            < Link to="/HouseB_Aroids">HouseA - Tropical</Link>
+            <br/>
+            < Link to="/HouseB_Aroids">HouseB - Aroids</Link>
             
 
             <Switch>
