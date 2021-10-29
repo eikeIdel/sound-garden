@@ -1,16 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import HouseATropical from '../components/greenhouse/single-houses/HouseATropical'
-import Welcome from '../components/welcome.js'
+import Greenhouse from '../components/greenhouse/greenhouse';
+import Welcome from '../components/welcome';
 
 export default function Navigation() {
     return (
         <Router>
-            < Link to="/HouseA_Tropical">Greenhouse</Link>
-            < Link to="/Welcome">Welcome</Link>
+            < Link to="/HouseA_Tropical">HouseA - Tropical</Link>
+            < Link to="/HouseB_Aroids">HouseA - Tropical</Link>
+            
 
             <Switch>
-                <Route path="/Welcome">
+                <Route exact path="/">
                     <Welcome/>
                 </Route>
             
@@ -18,59 +19,41 @@ export default function Navigation() {
                     <Map/>
                 </Route> */}
 
+                {/* START ROUTE FOR GREENHOUSES */}
+
                 <Route exact path="/HouseA_Tropical">
-                    <HouseATropical/>
+                <Greenhouse houseName='HouseA_Tropical' soundSelection = {['rain','bird','wind','monkey']}/>
                 </Route>
-                {/* <Route exact path="/HouseB_Aroids">
-                    <HouseBAroids/>
-                </Route>
+                <Route exact path="/HouseB_Aroids">
+                <Greenhouse houseName='HouseB_Aroids' soundSelection = {['rain','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseC_TropicalCrops">
-                    <HouseCTropicalCrops/>
-                </Route>
+                <Greenhouse houseName='HouseC_TropicalCrops' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseD_Orchids">
-                    <HouseDOrchids/>
-                </Route>
+                <Greenhouse houseName='HouseD_Orchids' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/House_Rainforest">
-                    <HouseRainforest/>
-                </Route>
+                <Greenhouse houseName='House_Rainforest' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseF_Ferns">
-                    <HouseFFerns/>
-                </Route>
+                <Greenhouse houseName='HouseF_Ferns' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseG_Bromeliads">
-                    <HouseGBromeliads/>
-                </Route>
+                <Greenhouse houseName='HouseG_Bromeliads' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseH_AfricanSucculents">
-                    <HouseHAfricanSucculents/>
-                </Route>
+                <Greenhouse houseName='HouseH_AfricanSucculents' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseI_Cacti">
-                    <HouseICacti/>
-                </Route>
+                <Greenhouse houseName='HouseI_Cacti' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseK_SouthAfrica">
-                    <HouseKSouthAfrica/>
-                </Route>
+                <Greenhouse houseName='HouseK_SouthAfrica' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseL_CarnivorousPlants">
-                    <HouseLCarnivorousPlants/>
-                </Route>
+                <Greenhouse houseName='HouseL_CarnivorousPlants' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseM_Australia">
-                    <HouseMAustralia/>
-                </Route>
+                <Greenhouse houseName='HouseM_Australia' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseN_Camellias">
-                    <HouseNCamellias/>
-                </Route>
+                <Greenhouse houseName='HouseN_Camellias' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseO_VictoriaLilies">
-                    <HouseOVictoriaLilies/>
-                </Route>
+                <Greenhouse houseName='HouseO_VictoriaLilies' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
                 <Route exact path="/HouseP_Mediterranean">
-                    <HousePMediterranean/>
-                </Route>
+                <Greenhouse houseName='HouseP_Mediterranean' soundSelection = {['rain','bird','wind','monkey']}/>                </Route>
 
-                <Route exact path="/Quiz">
-                    <Quiz/>
-                </Route>
-
-                <Route exact path="/Backend">
-                    <Backend/>
-                </Route> */}
+            
 
             </Switch>
         </Router>
