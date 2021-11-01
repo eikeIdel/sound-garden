@@ -1,8 +1,8 @@
 import React from 'react';
 import './welcome.css';
-import Header from './welcome/header';
-import MainContent from './welcome/main-content';
-import Footer from './welcome/footer';
+import Header from './header';
+import MainContent from './main-content';
+import Footer from './footer';
 
 
 function Welcome () {
