@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Greenhouse from '../greenhouse/greenhouse';
-import Welcome from '../components/welcome';
+import Welcome from '../welcome/welcome';
 
 export default function Navigation() {
     return (
