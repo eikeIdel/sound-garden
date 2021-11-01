@@ -4,23 +4,19 @@ import "./slider.css";
 function Slider(props) {
   const [volume, setVolume] = useState(0);
   const [muted, setMuted] = useState(false);
-  let finalVolume = muted ? 0 : volume; //volume ** 2
-
-  function muteHandle() {
-    setMuted(!muted);
-    console.log(muted);
-  }
-
+  let finalVolume = muted ? 0 : volume; 
+ 
   return (
     <div className="slider-main">
       <div className="info-button">
         <img
           src="https://via.placeholder.com/100x100?text=i"
           alt="info-button"
+          onClick={()=>alert(props.infoText)}
         />
       </div>
 
-      <button className="mute-button" onClick={muteHandle}>
+      <button className="mute-button" onClick={()=>setMuted(!muted)}>
         Mute
       </button>
 
@@ -33,7 +29,7 @@ function Slider(props) {
         step={0.02}
         value={volume}
         onChange={(event) => {
-          setVolume(event.target.value); //.valueAsNumber
+          setVolume(event.target.value); 
         }}
       />
 

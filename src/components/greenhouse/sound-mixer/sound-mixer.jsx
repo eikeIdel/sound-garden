@@ -8,10 +8,15 @@ function SoundMixer(props) {
 
   return (
     <div className="sound-mixer-main">
-      {props.soundSelection.map((slectedSound)=>
+     
+      {props.soundSelection.map(slectedSound =>
+
       <Slider 
       name={slectedSound}
-      source={soundList[soundList.findIndex(soundObj => soundObj.name === slectedSound)]['source']}/>)}
+      source={soundList[soundList.findIndex(soundObj => soundObj.name === slectedSound)]['source']}
+      infoText={soundList[soundList.findIndex(soundObj => soundObj.name === slectedSound)]['infoText']}
+      />)}
+      
     </div>
   );
 }

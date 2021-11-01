@@ -29,16 +29,15 @@ export default function Navigation() {
                 </Route>
 
                 <Route exact path="/HouseB_Aroids">
-                <Greenhouse houseName='HouseB_Aroids' soundSelection = {['rain','wind','monkey']}/>                
+                <Greenhouse houseName='HouseB_Aroids' soundSelection = {['rain','wind','monkey']}/>            
                 </Route>
 
                 <Route exact path="/HouseC_TropicalCrops">
-
-                <Greenhouse houseName='HouseC_TropicalCrops' soundSelection = {['rain','bird','wind','monkey']}/>                
+                <Greenhouse houseName='HouseC_TropicalCrops' soundSelection = {['rain','bird','wind']}/>              
                 </Route>
                 
                 <Route exact path="/HouseD_Orchids">
-                <Greenhouse houseName='HouseD_Orchids' soundSelection = {['rain','bird','wind','monkey']}/>                
+                <Greenhouse houseName='HouseD_Orchids' soundSelection = {['rain','bird','wind','monkey']}/>          
                 </Route>
 
                 <Route exact path="/House_Rainforest">
@@ -50,7 +49,7 @@ export default function Navigation() {
                 </Route>
 
                 <Route exact path="/HouseG_Bromeliads">
-                <Greenhouse houseName='HouseG_Bromeliads' soundSelection = {['rain','bird','wind','monkey']}/>               
+                <Greenhouse houseName='HouseG_Bromeliads' soundSelection = {['rain','wind','monkey']}/>               
                  </Route>
 
                 <Route exact path="/HouseH_AfricanSucculents">
