@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import { useState,useEffect } from 'react';
 import "./slider.css";
 
 function Slider(props) {
   const [volume, setVolume] = useState(0);
   const [muted, setMuted] = useState(false);
   let finalVolume = muted ? 0 : volume; 
+
+  const [soundObj,setSoundObj] = useState('');
+    console.log(props.sourceId)
+    useEffect(()=>{
+       fetch(`https://freesound.org/apiv2/sounds/${props.sourceId}/?token=B2giRt5IAiosOu6pvRcfAM4zpU8qDA2f37HBddB3`)
+       .then(response => response.json())
+       .then(json => {
+         setSoundObj({
+          name:props.name,
+          source:json.previews["preview-hq-mp3"],
+          infoText:props.infoText})
+      });
+  },[])
  
   return (
     <div className="slider-main">
@@ -12,7 +25,7 @@ function Slider(props) {
         <img
           src="https://via.placeholder.com/100x100?text=i"
           alt="info-button"
-          onClick={()=>alert(props.infoText)}
+          onClick={()=>alert(soundObj.infoText)}
         />
       </div>
 
@@ -34,8 +47,8 @@ function Slider(props) {
       />
 
       <p style={{ width: "30px" }}>{parseInt(finalVolume * 100)}%</p>
-      <p style={{width: '60px', fontSize:'0.5rem'}}>Sourcefile:{props.source}</p>
-      {console.log(props)}
+      <p style={{width: '60px', fontSize:'0.5rem'}}>Sourcefile:{soundObj.source}</p>
+      
     </div>
   );
 }
