@@ -45,6 +45,7 @@ function Slider(props) {
           setVolume(event.target.value); 
         }}
       />
+      
 
       <p style={{ width: "30px" }}>{parseInt(finalVolume * 100)}%</p>
       <p style={{width: '60px', fontSize:'0.5rem'}}>Sourcefile:{soundObj.source}</p>

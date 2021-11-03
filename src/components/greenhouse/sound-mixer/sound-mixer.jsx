@@ -6,8 +6,6 @@ import { soundList } from "./soundList";
 
 function SoundMixer(props) {
 
-  
-
   return (
     <div className="sound-mixer-main">
      
