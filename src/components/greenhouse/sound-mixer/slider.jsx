@@ -1,13 +1,13 @@
-import { useState,useEffect } from 'react';
+import { useState,useEffect,useRef } from 'react';
 import "./slider.css";
 
 function Slider(props) {
   const [volume, setVolume] = useState(0);
   const [muted, setMuted] = useState(false);
-  let finalVolume = muted ? 0 : volume; 
+  let finalVolume = muted ? 0 : volume ; 
 
   const [soundObj,setSoundObj] = useState('');
-    console.log(props.sourceId)
+    
     useEffect(()=>{
        fetch(`https://freesound.org/apiv2/sounds/${props.sourceId}/?token=B2giRt5IAiosOu6pvRcfAM4zpU8qDA2f37HBddB3`)
        .then(response => response.json())
@@ -19,6 +19,12 @@ function Slider(props) {
       });
   },[])
  
+  const audioRef = useRef(new Audio(soundObj.source));
+  
+  useEffect(() => {
+    muted ? audioRef.current.pause() : audioRef.current.play()
+  }, [muted]);
+
   return (
     <div className="slider-main">
       <div className="info-button">
@@ -45,6 +51,7 @@ function Slider(props) {
           setVolume(event.target.value); 
         }}
       />
+      
       
 
       <p style={{ width: "30px" }}>{parseInt(finalVolume * 100)}%</p>
