@@ -18,11 +18,16 @@ function Slider(props) {
           infoText:props.infoText})
       });
   },[])
- 
-  const audioRef = useRef(new Audio(soundObj.source));
+ const audio = new Audio(soundObj.source);
+    const audioRef = useRef(new Audio(soundObj.source));
+  // console.log(soundObj.source)
+  console.log("outside",audioRef.current.src);
+  console.log(audio);
   
+
   useEffect(() => {
-    muted ? audioRef.current.pause() : audioRef.current.play()
+    muted ? audioRef.current.pause() : audioRef.current.play();
+    console.log("mounted",audioRef.current.src);
   }, [muted]);
 
   return (
@@ -43,12 +48,7 @@ function Slider(props) {
         className="slider"
         type="range"
         name={props.name}
-        min={0}
-        max={1}
-        step={0.02}
-        value={volume}
-        onChange={(event) => {
-          setVolume(event.target.value); 
+        
         }}
       />
       
