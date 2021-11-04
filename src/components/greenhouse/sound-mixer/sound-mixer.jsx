@@ -28,11 +28,15 @@ const [masterVolume,setMasterVolume] = useState(0.5);
         max={1}
         step={0.02}
         value={masterVolume}
+        list="tickmarks"
         onChange={(event) => {
           setMasterVolume(event.target.value);
+          
+        
         }}
       />
-      
+       <datalist id="tickmarks">
+      <option>0</option><option>0.5</option><option>1</option></datalist>  
     </div>
   );
 }
