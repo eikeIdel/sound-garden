@@ -5,7 +5,7 @@ function Slider(props) {
   const [volume, setVolume] = useState(0);
   const [muted, setMuted] = useState(false);
   const [soundObj,setSoundObj] = useState('');
-  // let finalVolume = muted ? 0 : volume
+  
    
     useEffect(()=>{
        fetch(`https://freesound.org/apiv2/sounds/${props.sourceId}/?token=B2giRt5IAiosOu6pvRcfAM4zpU8qDA2f37HBddB3`)
@@ -21,12 +21,15 @@ function Slider(props) {
   const audioRef = useRef(new Audio(soundObj.source));
   
   useEffect(() => {
-    muted ? audioRef.current.pause() : audioRef.current.play();
+    muted || props.masterMuted ? audioRef.current.pause() : audioRef.current.play();
     audioRef.current.volume = volume * props.masterVolume;
-  }, [muted,volume,props.masterVolume]);
+  }, [muted,volume,props.masterMuted,props.masterVolume]);
 
   return (
+    
+    
     <div className="slider-main">
+      
       <div className="info-button">
         <img
           src="https://via.placeholder.com/100x100?text=i"
@@ -35,13 +38,17 @@ function Slider(props) {
         />
       </div>
 
-      <button className="mute-button" onClick={()=>setMuted(!muted)}>
-        Mute
-      </button>
+      <div className="mute-button">
+          <img
+            src={muted ? props.imgPlaySound : props.imgMuteSound}
+            alt="info-button"
+            onClick={()=>setMuted(!muted)}
+          />
+      </div>
 
       <audio src={soundObj.source} ref={audioRef} loop></audio>
       
-      <input
+      <input 
         className="slider"
         type="range"
         name={props.name}
@@ -53,13 +60,11 @@ function Slider(props) {
           setVolume(event.target.value);
         }}
       />
-      
 
-        
-      {/* <p  style={{ width: "30px" }}>{parseInt(finalVolume * 100)}%</p> */}
-      {/* <p style={{width: '60px', fontSize:'0.5rem'}}>Sourcefile:{soundObj.source}</p> */}
+      <h6>{props.name}</h6>      
       
     </div>
+    
   );
 }
 
