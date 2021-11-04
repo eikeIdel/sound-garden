@@ -4,10 +4,9 @@ import "./slider.css";
 function Slider(props) {
   const [volume, setVolume] = useState(0);
   const [muted, setMuted] = useState(false);
-  let finalVolume = muted ? 0 : volume ; 
-
   const [soundObj,setSoundObj] = useState('');
-    
+  // let finalVolume = muted ? 0 : volume
+   
     useEffect(()=>{
        fetch(`https://freesound.org/apiv2/sounds/${props.sourceId}/?token=B2giRt5IAiosOu6pvRcfAM4zpU8qDA2f37HBddB3`)
        .then(response => response.json())
@@ -18,17 +17,13 @@ function Slider(props) {
           infoText:props.infoText})
       });
   },[])
- const audio = new Audio(soundObj.source);
-    const audioRef = useRef(new Audio(soundObj.source));
-  // console.log(soundObj.source)
-  console.log("outside",audioRef.current.src);
-  console.log(audio);
+ 
+  const audioRef = useRef(new Audio(soundObj.source));
   
-
   useEffect(() => {
     muted ? audioRef.current.pause() : audioRef.current.play();
-    console.log("mounted",audioRef.current.src);
-  }, [muted]);
+    audioRef.current.volume = volume * props.masterVolume;
+  }, [muted,volume,props.masterVolume]);
 
   return (
     <div className="slider-main">
@@ -44,18 +39,25 @@ function Slider(props) {
         Mute
       </button>
 
+      <audio src={soundObj.source} ref={audioRef} loop></audio>
+      
       <input
         className="slider"
         type="range"
         name={props.name}
-        
+        min={0}
+        max={1}
+        step={0.02}
+        value={volume}
+        onChange={(event) => {
+          setVolume(event.target.value);
         }}
       />
       
-      
 
-      <p style={{ width: "30px" }}>{parseInt(finalVolume * 100)}%</p>
-      <p style={{width: '60px', fontSize:'0.5rem'}}>Sourcefile:{soundObj.source}</p>
+        
+      {/* <p  style={{ width: "30px" }}>{parseInt(finalVolume * 100)}%</p> */}
+      {/* <p style={{width: '60px', fontSize:'0.5rem'}}>Sourcefile:{soundObj.source}</p> */}
       
     </div>
   );
