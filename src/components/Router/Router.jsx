@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Greenhouse from '../greenhouse/greenhouse';
 import Welcome from '../welcome/welcome';
+import Map from '../07-08-map-responsive-layout';
 
 export default function Navigation() {
     return (
@@ -18,9 +19,9 @@ export default function Navigation() {
                     <Welcome/>
                 </Route>
             
-                {/* <Route exact path="/Map">
+                <Route path="/Map">
                     <Map/>
-                </Route> */}
+                </Route>
 
                 {/* START ROUTE FOR GREENHOUSES */}
 

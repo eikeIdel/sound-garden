@@ -26,9 +26,9 @@ const MainContent = () => {
         </div>
         <Route>
           <div className="button-section">
-            <Switch path="/">
+            <Link to="/Map">
               <button className="button">Enter</button>
-            </Switch>
+            </Link>
           </div>
         </Route>
         &nbsp; &nbsp;
