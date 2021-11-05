@@ -1,39 +1,43 @@
-import React from 'react';
-import './main-content.css';
-import ImageRandomizer from './image-randomizer';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import React from "react";
+import "./main-content.css";
+import ImageRandomizer from "./image-randomizer";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Logo1 from "./assets/soundgarden_logo.png";
 
 const MainContent = () => {
-    return (
-        <Router>
-        
-        <div className="welcome-content">
-            <div className="welcome-text">
-                <h1 className="title">Sound Garden</h1>
-                <h1 className="title-de">Klanggarten</h1>
+  return (
+    <Router>
+      <div className="welcome-content">
+        <div className="welcome-text">
+          <div className="logo-comp">
+            <div className="logo">
+              <img src={Logo1} alt="Logo1" width="90%" />
             </div>
-            <div className="welcome-subtext">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                </div>
-                <Route>
-            <div className="button">
-          <Switch path="/"><button>Enter</button></Switch>
-            </div>
-                </Route>
-            <div className="image-section">
-                <ImageRandomizer />
-            </div>
+          </div>
         </div>
-
-        </Router>
-    );
-}
+        <div className="welcome-subtext">
+          <p>
+            "Welcome to Sound Garden an immersive experience for the Berlin
+            Botanical Garden and Museum Greenhouses. Here you can connect to the
+            different greenhouses which you can visit in person, and listen to
+            the sounds of the fauna and flora relative to the environment of
+            each greenhouse.
+          </p>
+        </div>
+        <Route>
+          <div className="button-section">
+            <Switch path="/">
+              <button className="button">Enter</button>
+            </Switch>
+          </div>
+        </Route>
+        &nbsp; &nbsp;
+        <div className="image-section">
+          <ImageRandomizer />
+        </div>
+      </div>
+    </Router>
+  );
+};
 
 export default MainContent;

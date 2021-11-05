@@ -6,10 +6,10 @@ const Footer = () => {
     <footer>
       <div>
         <div className="social">
-          <i class="">A</i>
-          <i class="">B</i>
-          <i class="">C</i>
-          <i class="">D</i>
+          <i class="">Impressum</i> {""}
+          <i class="">Privacy</i> {""}
+          <i class="">Contact</i> {""}
+          <i class="">Press</i> {""}
         </div>
         <div className="copyright">Copyright &copy; 2021. Sound Garden</div>
       </div>
