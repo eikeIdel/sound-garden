@@ -1,0 +1,98 @@
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .title,
+.title-de {
+  position: fixed;
+  display: block;
+  top: 4em;
+
+  width: 50%;
+
+  font-size: 2em;
+
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.title {
+  animation-name: anim-1;
+}
+
+.title-de {
+  animation-name: anim-2;
+}
+
+@keyframes anim-1 {
+  0%,
+  8.3% {
+    left: -50%;
+    opacity: 0;
+  }
+  8.3%,
+  25% {
+    left: 25%;
+    opacity: 1;
+  }
+  33.33%,
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-2 {
+  0%,
+  33.33% {
+    left: -50%;
+    opacity: 0;
+  }
+  41.63%,
+  58.29% {
+    left: 25%;
+    opacity: 1;
+  }
+  66.66%,
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+} */
+
+.logo {
+  display: inline-block;
+}
+
+.welcome-subtext {
+  display: inline-block;
+  padding-left: 7%;
+  padding-right: 7%;
+  margin: 3%;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  transform: translateY(4px);
+}

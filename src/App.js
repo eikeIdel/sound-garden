@@ -1,10 +1,15 @@
 import './App.css';
-import Map from "./components/07-08-map-responsive-layout"
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navigation from './components/Router/Router.jsx';
+
 
 function App() {
   return (
-    <div className="Map">
-      <Map />
+    <div className="App">
+
+      <Navigation/>
+
     </div>
   );
 }
