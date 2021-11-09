@@ -1,4 +1,4 @@
-import { useState,useEffect} from 'react';
+import { useState} from 'react';
 import Slider from "./slider";
 import "./sound-mixer.css";
 import { soundList } from "./soundList";
@@ -16,10 +16,11 @@ const imgPlaySound = "https://via.placeholder.com/300x200/FF0000?text=Play";
      <form>
 
       {props.soundSelection.map(slectedSound =>
+      
       <Slider 
-      name={slectedSound}
-      sourceId={soundList[soundList.findIndex((soundObj) => soundObj.name === slectedSound)]['sourceId']}
-      infoText={soundList[soundList.findIndex((soundObj) => soundObj.name === slectedSound)]['infoText']}
+      name={Object.keys(slectedSound)[0]}
+      sourceId={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['sourceId']}
+      infoText={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['infoText']}
       masterVolume={masterVolume}
       masterMuted={masterMuted}
       imgMuteSound = {imgMuteSound}

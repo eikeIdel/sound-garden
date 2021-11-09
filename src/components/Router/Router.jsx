@@ -26,11 +26,11 @@ export default function Navigation() {
                 {/* START ROUTE FOR GREENHOUSES */}
 
                 <Route path="/HouseA_Tropical">
-                <Greenhouse houseName='House A - Tropical' soundSelection = {['thunder','rain','bird','wind','monkey','jungle']}/>
+                <Greenhouse houseName='House A - Tropical' soundSelection = {[{thunder:0.5},{rain:0.2},{bird:0.6},{wind:0.1},{monkey:0.3},{jungle:0}]}/>
                 </Route>
 
                 <Route path="/HouseB_Aroids">
-                <Greenhouse houseName='House B - Aroids' soundSelection = {['rain','river','wildlife','thunder']}/>            
+                <Greenhouse houseName='House B - Aroids' soundSelection = {[{rain:0.1},{river:0.6},{wildlife:0.2},{thunder:0}]}/>            
                 </Route>
 
                 <Route path="/HouseC_TropicalCrops">
