@@ -26,7 +26,7 @@ export default function Navigation() {
                 {/* START ROUTE FOR GREENHOUSES */}
 
                 <Route path="/HouseA_Tropical">
-                <Greenhouse houseName='House A - Tropical' soundSelection = {[{thunder:0.5},{rain:0.2},{bird:0.6},{wind:0.1},{monkey:0.3},{jungle:0}]}/>
+                <Greenhouse houseName='House A - Tropical' soundSelection = {[{thunder:0.5},{rain:0.2},{bird:0.6},{wind:0.1},{monkey:0.3},{jungle:1}]}/>
                 </Route>
 
                 <Route path="/HouseB_Aroids">

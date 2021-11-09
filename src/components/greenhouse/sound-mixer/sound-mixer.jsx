@@ -19,6 +19,9 @@ const imgPlaySound = "https://via.placeholder.com/300x200/FF0000?text=Play";
       
       <Slider 
       name={Object.keys(slectedSound)[0]}
+      presetValue={slectedSound[Object.keys(slectedSound)[0]]}
+      presetLoaded={props.presetLoaded}
+      setPresetLoaded={props.setPresetLoaded}
       sourceId={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['sourceId']}
       infoText={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['infoText']}
       masterVolume={masterVolume}
