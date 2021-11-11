@@ -1,6 +1,10 @@
 import SoundMixer from "./sound-mixer/sound-mixer";
 import './greenhouse.css'
+
 import { useState } from "react";
+
+// import BGImage from "./bg-visual/background-image.js";
+
 
 function Greenhouse(props) { 
   //props are declared in ../Router/router.jsx
@@ -22,8 +26,11 @@ function Greenhouse(props) {
         />
         <h4 className='house-name'>{props.houseName}</h4>
 
+
         <img className="greenhouse-preset-button" src="https://via.placeholder.com/200x200?text=Preset" alt="greenhouse-preset" onClick={()=>setPresetLoaded(!presetLoaded)}/>
       
+              
+
       </div>
       
       <SoundMixer soundSelection={props.soundSelection} presetLoaded={presetLoaded} setPresetLoaded={setPresetLoaded}/>

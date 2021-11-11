@@ -11,7 +11,7 @@ const MainContent = () => {
         <div className="welcome-text">
           <div className="logo-comp">
             <div className="logo">
-              <img src={Logo1} alt="Logo1" width="90%" />
+              <img src={Logo1} alt="Logo1" width="100%" />
             </div>
           </div>
         </div>
