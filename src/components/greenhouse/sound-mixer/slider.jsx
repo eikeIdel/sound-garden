@@ -5,8 +5,7 @@ function Slider(props) {
   const [volume, setVolume] = useState(0);
   const [muted, setMuted] = useState(false);
   const [soundObj,setSoundObj] = useState('');
-  
-   
+     
     useEffect(()=>{
        fetch(`https://freesound.org/apiv2/sounds/${props.sourceId}/?token=B2giRt5IAiosOu6pvRcfAM4zpU8qDA2f37HBddB3`)
        .then(response => response.json())
@@ -19,10 +18,17 @@ function Slider(props) {
   },[])
  
   const audioRef = useRef(new Audio(soundObj.source));
-  
+
+  useEffect(() => {
+    if(props.presetLoaded){
+      setVolume(props.presetValue)
+    }
+  },[props.presetLoaded]);
+
   useEffect(() => {
     muted || props.masterMuted ? audioRef.current.pause() : audioRef.current.play();
     audioRef.current.volume = volume * props.masterVolume;
+    props.setPresetLoaded(false);
   }, [muted,volume,props.masterMuted,props.masterVolume]);
 
   return (
