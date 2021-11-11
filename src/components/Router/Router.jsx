@@ -6,15 +6,7 @@ import Map from '../07-08-map-responsive-layout';
 
 export default function Navigation() {
     return (
-        <Router>
-            < Link to="/">Welcome</Link>
-             <br/>
-            < Link to="/HouseA_Tropical">House A - Tropical</Link>
-            <br/>
-            < Link to="/HouseB_Aroids">House B - Aroids</Link>
-            
-
-            <Switch>
+        <>
                 <Route exact path="/">
                     <Welcome/>
                 </Route>
@@ -86,8 +78,6 @@ export default function Navigation() {
                 </Route>
 
             
-
-            </Switch>
-        </Router>
+</>
     )
 }
