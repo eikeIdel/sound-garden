@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import { Link } from "react-router-dom";
+
 import Facebook from "./assets/socialmedia/fb.png";
 import Instagram from "./assets/socialmedia/insta.png";
 import Soundcloud from "./assets/socialmedia/soundcloud.png";
