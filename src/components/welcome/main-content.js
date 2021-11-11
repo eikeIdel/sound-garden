@@ -17,7 +17,7 @@ const MainContent = () => {
         </div>
         <div className="welcome-subtext">
           <p>
-            Welcome to Sound Garden an immersive experience for the Berlin
+            "Welcome to Sound Garden an immersive experience for the Berlin
             Botanical Garden and Museum Greenhouses. Here you can connect to the
             different greenhouses which you can visit in person, and listen to
             the sounds of the fauna and flora relative to the environment of

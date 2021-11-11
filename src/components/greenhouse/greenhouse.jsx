@@ -21,14 +21,13 @@ function Greenhouse(props) {
       {/* <BGImage /> */}
       <div className="greenhouse-head">
 
-        < Link to="/Map">
-          <img 
-          className="greenhouse-return-button" 
-          src='https://via.placeholder.com/200x200?text=Return'  
-          alt="greenhouse-return"
-          // onClick={() => alert('Return to overview map')}
-          /> 
-        </Link>
+        < Link to="/Map"><div>
+        <img 
+        className="greenhouse-return-button" 
+        src='https://via.placeholder.com/200x200?text=Return'  
+        alt="greenhouse-return"
+        // onClick={() => alert('Return to overview map')}
+        /> </div></Link>
 
         <h4 className='house-name'>{props.houseName}</h4>
 
