@@ -20,7 +20,6 @@ const MainContent = () => {
             Botanical Garden and Museum Greenhouses.
           </p>
         </div>
-        
           <div className="button-section">
             <Link to="/Map">
               <button className="button">
@@ -29,7 +28,6 @@ const MainContent = () => {
               </button>
             </Link>
           </div>
-        
         &nbsp; &nbsp;
         <div className="image-section">
           <ImageRandomizer />
