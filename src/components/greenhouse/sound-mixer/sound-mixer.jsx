@@ -2,13 +2,15 @@ import { useState} from 'react';
 import Slider from "./slider";
 import "./sound-mixer.css";
 import { soundList } from "./soundList";
+import Mutebttn from "../button-icons/mute-bttn.png";
+import Unmutebttn from "../button-icons/unmuted-bttn.png";
 
 
 function SoundMixer(props) {
 const [masterVolume,setMasterVolume] = useState(0.5);
 const [masterMuted,setMasterMuted] = useState(false);
-const imgMuteSound = "https://via.placeholder.com/300x200/BBDCA2?text=Mute";
-const imgPlaySound = "https://via.placeholder.com/300x200/FF0000?text=Play";
+const imgMuteSound = Mutebttn;
+const imgPlaySound = Unmutebttn;
 
   return (
     <div className="sound-mixer-main">
@@ -24,6 +26,7 @@ const imgPlaySound = "https://via.placeholder.com/300x200/FF0000?text=Play";
       setPresetLoaded={props.setPresetLoaded}
       sourceId={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['sourceId']}
       infoText={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['infoText']}
+      soundImg={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['img']}
       masterVolume={masterVolume}
       masterMuted={masterMuted}
       imgMuteSound = {imgMuteSound}
@@ -39,7 +42,7 @@ const imgPlaySound = "https://via.placeholder.com/300x200/FF0000?text=Play";
         <div className="master-mute-button">
           <img
             src={masterMuted ? imgPlaySound : imgMuteSound}
-            alt="info-button"
+            alt="mute-button"
             onClick={()=>setMasterMuted(!masterMuted)}
           />
         </div>
