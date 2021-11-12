@@ -9,8 +9,8 @@ import Unmutebttn from "../button-icons/unmuted-bttn.png";
 function SoundMixer(props) {
 const [masterVolume,setMasterVolume] = useState(0.5);
 const [masterMuted,setMasterMuted] = useState(false);
-const imgMuteSound = Mutebttn;
-const imgPlaySound = Unmutebttn;
+const imgMuteSound = Unmutebttn;
+const imgPlaySound = Mutebttn;
 
   return (
     <div className="sound-mixer-main">
