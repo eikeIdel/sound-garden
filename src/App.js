@@ -7,7 +7,7 @@ import Navigation from './components/Router/Router.jsx';
 function App() {
   return (
     <div className="App">
-
+      
       <Navigation/>
 
     </div>

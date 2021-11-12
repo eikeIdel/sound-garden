@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding:01rem;
-  
+  padding:1rem;
+  width: 100%;
 }
 
 .info-button {
@@ -25,5 +25,9 @@
 .mute-button > img{
   max-width: 100%;
   min-width: 100%;
+}
+
+.slider{
+  width: 50%;
 }
 

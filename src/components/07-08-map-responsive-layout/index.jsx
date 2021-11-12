@@ -1,6 +1,6 @@
 import floorMap from './images/map.png'
 import './styles.css'
-import { BrowserRouter as Link } from "react-router-dom";
+import { BrowserRouter as Router,Link } from "react-router-dom";
 
 
 function Map () {
@@ -18,9 +18,9 @@ function Map () {
                     <image width="1280" height="692" href={floorMap}>
                         <title>Botanical Garden Berlin Greenhouses Map</title>
                     </image>
-                    
-                    <polyline onClick={() => myFunction("You clicked House A")} className="House" id="A_House" points="320,27,321,65,336,78,330,83,330,200,337,207,328,215,328,258,361,258,374,243,384,255,692,256,702,243,712,254,760,254,759,214,743,201,752,193,752,80,747,74,756,66,756,19,719,19,705,34,694,21,650,23,651,-1,642,-1,641,12,629,12,630,-1,622,-1,621,22,390,23,376,36,367,27,320,27" />
-
+                    <Link to="/HouseA_Tropical">
+                    <polyline  className="House" id="A_House" points="320,27,321,65,336,78,330,83,330,200,337,207,328,215,328,258,361,258,374,243,384,255,692,256,702,243,712,254,760,254,759,214,743,201,752,193,752,80,747,74,756,66,756,19,719,19,705,34,694,21,650,23,651,-1,642,-1,641,12,629,12,630,-1,622,-1,621,22,390,23,376,36,367,27,320,27" />
+                    </Link>
                     <polyline onClick={() => myFunction("You clicked House B")}className="House" id="B_House" points="753,88,753,187,937,185,938,87,753,88" />
                 
                     <rect onClick={() => myFunction("You clicked House C")}className="House" id="C_House" x="938" y="62" width="145" height="150" />

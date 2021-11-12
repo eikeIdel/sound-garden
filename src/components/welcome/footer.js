@@ -4,7 +4,12 @@ import Facebook from "./assets/icons/fb.png";
 import Instagram from "./assets/icons/insta.png";
 import Soundcloud from "./assets/icons/soundcloud.png";
 
-const Footer = () => {
+import Facebook from "./assets/socialmedia/fb.png";
+import Instagram from "./assets/socialmedia/insta.png";
+import Soundcloud from "./assets/socialmedia/soundcloud.png";
+import Youtube from "./assets/socialmedia/yt.png";
+
+function Footer() {
   return (
     <footer>
       <div className="footer_links">
@@ -35,6 +40,6 @@ const Footer = () => {
       <div className="copyright">Copyright &copy; 2021. Sound Garden</div>
     </footer>
   );
-};
+}
 
 export default Footer;

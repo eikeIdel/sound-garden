@@ -26,7 +26,7 @@
 
 .footer_socialmedia-link:hover {
   opacity: 0.5;
-}
+
 
 .copyright {
   display: flex;
@@ -34,4 +34,14 @@
   justify-content: center;
   font-size: 12px;
   margin-top: 1%;
+}
+
+.social-media-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.social-icons {
+  max-width: 1200%;
 }
