@@ -3,31 +3,30 @@ import "./main-content.css";
 import ImageRandomizer from "./image-randomizer";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import Logo1 from "./assets/soundgarden_logo.png";
+import MapIcon from "./assets/icons/map_icon.png";
 
 const MainContent = () => {
   return (
     
       <div className="welcome-content">
         <div className="welcome-text">
-          <div className="logo-comp">
-            <div className="logo">
-              <img src={Logo1} alt="Logo1" width="100%" />
-            </div>
+          <div className="logo">
+            <img src={Logo1} alt="Logo1" width="100%" />
           </div>
         </div>
         <div className="welcome-subtext">
           <p>
-            "Welcome to Sound Garden an immersive experience for the Berlin
-            Botanical Garden and Museum Greenhouses. Here you can connect to the
-            different greenhouses which you can visit in person, and listen to
-            the sounds of the fauna and flora relative to the environment of
-            each greenhouse.
+            Welcome to Sound Garden an immersive experience for the Berlin
+            Botanical Garden and Museum Greenhouses.
           </p>
         </div>
         
           <div className="button-section">
             <Link to="/Map">
-              <button className="button">Enter</button>
+              <button className="button">
+                <span>map</span>
+                <img className="button-img" src={MapIcon} width="70px" />
+              </button>
             </Link>
           </div>
         
