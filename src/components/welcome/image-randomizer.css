@@ -1,4 +1,4 @@
-.slide-comp {
+/* .slide-comp {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,6 +34,80 @@
 }
 .slide > div:nth-child(5) {
   animation-delay: 20s;
+}
+
+@keyframes slide {
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.2);
+  }
+} */
+
+.slide-comp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide {
+  width: 440px;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  border: 8px solid rgb(226, 212, 180);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.slide > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  animation: slide 70s infinite;
+  opacity: 0;
+}
+
+.slide > div:nth-child(2) {
+  animation-delay: 10s;
+}
+.slide > div:nth-child(3) {
+  animation-delay: 15s;
+}
+.slide > div:nth-child(4) {
+  animation-delay: 25s;
+}
+.slide > div:nth-child(5) {
+  animation-delay: 25s;
+}
+.slide > div:nth-child(6) {
+  animation-delay: 30s;
+}
+.slide > div:nth-child(7) {
+  animation-delay: 35s;
+}
+.slide > div:nth-child(8) {
+  animation-delay: 40s;
+}
+.slide > div:nth-child(9) {
+  animation-delay: 45s;
+}
+.slide > div:nth-child(10) {
+  animation-delay: 50s;
+}
+.slide > div:nth-child(11) {
+  animation-delay: 55s;
+}
+.slide > div:nth-child(12) {
+  animation-delay: 55s;
 }
 
 @keyframes slide {

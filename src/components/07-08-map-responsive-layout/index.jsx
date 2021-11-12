@@ -1,6 +1,7 @@
 import floorMap from './images/map.png'
 import './styles.css'
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router,Link } from "react-router-dom";
+
 
 
 function Map () {
@@ -20,7 +21,7 @@ function Map () {
                     <image width="1280" height="692" href={floorMap}>
                         <title>Botanical Garden Berlin Greenhouses Map</title>
                     </image>
-                    
+
                     <Link to="/HouseA_Tropical">
                         <polyline onClick={() => myFunction("You clicked House A")} className="House" id="A_House" points="320,27,321,65,336,78,330,83,330,200,337,207,328,215,328,258,361,258,374,243,384,255,692,256,702,243,712,254,760,254,759,214,743,201,752,193,752,80,747,74,756,66,756,19,719,19,705,34,694,21,650,23,651,-1,642,-1,641,12,629,12,630,-1,622,-1,621,22,390,23,376,36,367,27,320,27" />
                     </Link>
@@ -80,6 +81,7 @@ function Map () {
                     <Link to="/HouseP_Mediterranean">
                         <polyline onClick={() => myFunction("You clicked House P")}className="House" id="P_House" points="1189,355,1161,391,1160,668,1167,668,1167,685,1187,685,1187,669,1203,669,1203,691,1212,691,1212,680,1223,680,1223,691,1233,691,1233,669,1246,669,1246,685,1268,685,1268,669,1279,669,1279,390,1256,354"/>
                     </Link>
+
                 </svg>
             </div>
         </div>
