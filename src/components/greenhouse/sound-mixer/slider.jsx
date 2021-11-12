@@ -4,55 +4,54 @@ import "./slider.css";
 function Slider(props) {
   const [volume, setVolume] = useState(0);
   const [muted, setMuted] = useState(false);
-  const [soundObj,setSoundObj] = useState('');
+  const [soundUrl,setSoundUrl] = useState('');
      
     useEffect(()=>{
        fetch(`https://freesound.org/apiv2/sounds/${props.sourceId}/?token=B2giRt5IAiosOu6pvRcfAM4zpU8qDA2f37HBddB3`)
        .then(response => response.json())
        .then(json => {
-         setSoundObj({
-          name:props.name,
-          source:json.previews["preview-hq-mp3"],
-          infoText:props.infoText})
+         setSoundUrl(json.previews["preview-hq-mp3"])
       });
   },[])
  
-  const audioRef = useRef(new Audio(soundObj.source));
+  const audioRef = useRef(new Audio(soundUrl));
 
   useEffect(() => {
     if(props.presetLoaded){
       setVolume(props.presetValue)
     }
-  },[props.presetLoaded]);
+    else if (props.soundReset){
+      setVolume(0);
+    }
+  },[props.presetLoaded,props.soundReset]);
 
   useEffect(() => {
     muted || props.masterMuted ? audioRef.current.pause() : audioRef.current.play();
     audioRef.current.volume = volume * props.masterVolume;
     props.setPresetLoaded(false);
+    props.setSoundReset(false);
   }, [muted,volume,props.masterMuted,props.masterVolume]);
 
   return (
-    
-    
     <div className="slider-main">
       
       <div className="info-button">
         <img
           src="https://via.placeholder.com/100x100?text=i"
           alt="info-button"
-          onClick={()=>alert(soundObj.infoText)}
+          onClick={()=>alert(props.infoText)}
         />
       </div>
 
       <div className="mute-button">
           <img
             src={muted ? props.imgPlaySound : props.imgMuteSound}
-            alt="info-button"
+            alt="mute-button"
             onClick={()=>setMuted(!muted)}
           />
       </div>
 
-      <audio src={soundObj.source} ref={audioRef} loop></audio>
+      <audio src={soundUrl} ref={audioRef} loop></audio>
       
       <input 
         className="slider"

@@ -13,7 +13,7 @@ const imgPlaySound = "https://via.placeholder.com/300x200/FF0000?text=Play";
   return (
     <div className="sound-mixer-main">
      
-     <form>
+     {/* <form> */}
 
       {props.soundSelection.map(slectedSound =>
       
@@ -28,8 +28,10 @@ const imgPlaySound = "https://via.placeholder.com/300x200/FF0000?text=Play";
       masterMuted={masterMuted}
       imgMuteSound = {imgMuteSound}
       imgPlaySound = {imgPlaySound}
+      soundReset={props.soundReset}
+      setSoundReset={props.setSoundReset}
       />)}
-      </form>
+      {/* </form> */}
       <h4>Master Volume:</h4>
 
       <div className="master-slider-container">
