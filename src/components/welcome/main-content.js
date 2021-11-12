@@ -1,7 +1,7 @@
 import React from "react";
 import "./main-content.css";
 import ImageRandomizer from "./image-randomizer";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import Logo1 from "./assets/soundgarden_logo.png";
 
 const MainContent = () => {
@@ -24,13 +24,11 @@ const MainContent = () => {
             each greenhouse.
           </p>
         </div>
-        <Route>
           <div className="button-section">
             <Link to="/Map">
               <button className="button">Enter</button>
             </Link>
           </div>
-        </Route>
         &nbsp; &nbsp;
         <div className="image-section">
           <ImageRandomizer />
