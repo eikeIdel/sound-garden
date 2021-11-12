@@ -1,21 +1,24 @@
-.greenhouse-main{
-    
+.greenhouse-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.greenhouse-head{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    width: 100%;
-    background-color: #BBDCA2;
-    padding: 0.7rem;    
+.greenhouse-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  background-color: #bbdca2;
+  padding: 0.7rem;
 }
 
-.greenhouse-return-button{
-    width: 3rem;
-    width: 3rem;
+.greenhouse-return-button {
+  width: 3rem;
+  width: 3rem;
 }
 
 /* .greenhouse-return-button:hover{
@@ -23,12 +26,12 @@
     background-color: #6A8347;
 } */
 
-
 .greenhouse-preset-button {
-    width: 3rem;
-    width: 3rem; 
+  width: 3rem;
+  width: 3rem;
 }
 
 .greenhouse-reset-button {
-    width: 3rem;
-    width: 3rem; }
+  width: 3rem;
+  width: 3rem;
+}

@@ -2,6 +2,9 @@ import SoundMixer from "./sound-mixer/sound-mixer";
 import './greenhouse.css'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { useState } from "react";
+import Returnbttn from "./button-icons/return-bttn2.png"
+import Resetbttn from "./button-icons/reset-bttn.png"
+import Presetbttn from "./button-icons/preset-bttn.png"
 
 // import BGImage from "./bg-visual/background-image.js";
 
@@ -18,7 +21,7 @@ function Greenhouse(props) {
         <Link to="/Map">
         <img 
         className="greenhouse-return-button" 
-        src='https://via.placeholder.com/200x200?text=Return'  
+        src={Returnbttn} 
         alt="greenhouse-return"
           
         
@@ -27,10 +30,10 @@ function Greenhouse(props) {
         <h4 className='house-name'>{props.houseName}</h4>
 
         
-        <img className="greenhouse-reset-button" src="https://via.placeholder.com/200x200?text=ResetSounds" alt="greenhouse-reset" onClick={()=>setSoundReset(true)}/>
+        <img className="greenhouse-reset-button" src={Resetbttn} alt="greenhouse-reset" onClick={()=>setSoundReset(true)}/>
        
 
-        <img className="greenhouse-preset-button" src="https://via.placeholder.com/200x200?text=Preset" alt="greenhouse-preset" onClick={()=>setPresetLoaded(true)}/>
+        <img className="greenhouse-preset-button" src={Presetbttn} alt="greenhouse-preset" onClick={()=>setPresetLoaded(true)}/>
       
               
 

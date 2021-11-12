@@ -4,11 +4,6 @@ import Facebook from "./assets/icons/fb.png";
 import Instagram from "./assets/icons/insta.png";
 import Soundcloud from "./assets/icons/soundcloud.png";
 
-import Facebook from "./assets/socialmedia/fb.png";
-import Instagram from "./assets/socialmedia/insta.png";
-import Soundcloud from "./assets/socialmedia/soundcloud.png";
-import Youtube from "./assets/socialmedia/yt.png";
-
 function Footer() {
   return (
     <footer>

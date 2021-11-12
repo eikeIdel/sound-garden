@@ -3,24 +3,24 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
-.master-slider-container{
+.master-slider-container {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.master-mute-button{
+.master-mute-button {
   width: 3rem;
   height: 2rem;
 }
 
-.master-mute-button > img{
+.master-mute-button > img {
   max-width: 100%;
   min-width: 100%;
 }
 
 .master-slider {
-
 }
