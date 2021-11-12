@@ -64,6 +64,8 @@
 
 .logo {
   display: inline-block;
+  max-width: 500px;
+  margin-left: 4%;
 }
 
 .welcome-subtext {

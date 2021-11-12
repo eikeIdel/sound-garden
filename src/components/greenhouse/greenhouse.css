@@ -1,5 +1,5 @@
 .greenhouse-main{
-      
+    
 }
 
 .greenhouse-head{
@@ -18,13 +18,17 @@
     width: 3rem;
 }
 
-.greenhouse-return-button:hover{
+/* .greenhouse-return-button:hover{
     opacity: 0.3;
     background-color: #6A8347;
-}
+} */
 
 
-.greenhouse-preset-button{
+.greenhouse-preset-button {
     width: 3rem;
     width: 3rem; 
 }
+
+.greenhouse-reset-button {
+    width: 3rem;
+    width: 3rem; }
