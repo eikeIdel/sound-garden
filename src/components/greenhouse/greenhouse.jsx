@@ -54,7 +54,7 @@ function Greenhouse(props) {
 
       </div>
       
-      <SoundMixer soundSelection={props.soundSelection} presetLoaded={presetLoaded} setPresetLoaded={setPresetLoaded} soundReset={soundReset} setSoundReset={setSoundReset} greenhouseId={props.greenhouseId} greenhousePresets={greenhousePresets}/>
+      <SoundMixer  presetLoaded={presetLoaded} setPresetLoaded={setPresetLoaded} soundReset={soundReset} setSoundReset={setSoundReset} greenhouseId={props.greenhouseId} greenhousePresets={greenhousePresets}/>
   
   </div>
   // </GreenhouseContext.Provider>

@@ -1,7 +1,6 @@
 import { useState,useContext} from 'react';
 import Slider from "./slider";
 import "./sound-mixer.css";
-import { soundList } from "./soundList";
 import Mutebttn from "../button-icons/mute-bttn.png";
 import Unmutebttn from "../button-icons/unmuted-bttn.png";
 // import GreenhouseContext from '../greenhouse.jsx';

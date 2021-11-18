@@ -1,7 +1,7 @@
 import { useState,useEffect,useRef } from 'react';
 import "./slider.css";
 import Infobttn from "../button-icons/info-bttn.png"
-import { soundList } from './soundList';
+
 import WeatherIcon from "../button-icons/weather_icon.png";
 import BirdIcon from "../button-icons/bird_icon.png";
 import WindIcon from "../button-icons/wind_icon.png";
@@ -16,14 +16,6 @@ function Slider(props) {
   const [muted, setMuted] = useState(false);
   const [soundUrl,setSoundUrl] = useState('');
   
-  useEffect(() => {
-    fetch(`http://localhost:8000/house-config/${props.greenhouseId}`)
-    .then(res => res.json())
-    .then(json => {
-      
-    })
-  })
-
   useEffect(()=>{
        fetch(`https://freesound.org/apiv2/sounds/${props.sourceId}/?token=B2giRt5IAiosOu6pvRcfAM4zpU8qDA2f37HBddB3`)
        .then(response => response.json())
