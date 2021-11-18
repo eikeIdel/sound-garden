@@ -22,8 +22,8 @@ const MainContent = () => {
       <div className="button-section">
         <Link to="/Map">
           <button className="button">
-            <span>map</span>
             <div className="button-img">
+              <p className="button-text">MAP</p>
               <img src={MapIcon} width="70px" />
             </div>
           </button>

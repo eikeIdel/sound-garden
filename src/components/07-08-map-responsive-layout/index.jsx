@@ -10,10 +10,11 @@ function Map () {
       };    
 
     return (
+        <div className="MapBody">
         <div className="Map">
-            <div id='floor_map'>
+            <div id="floor_map">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 1280 692" >
+                viewBox="0 0 1280 692">
                     
                     <image width="1280" height="692" href={floorMap}>
                         <title>Botanical Garden Berlin Greenhouses Map</title>
@@ -52,6 +53,7 @@ function Map () {
                 </svg>
             </div>
         </div>
+    </div>
     )
 }
 
