@@ -7,8 +7,16 @@ function Slider(props) {
   const [volume, setVolume] = useState(0);
   const [muted, setMuted] = useState(false);
   const [soundUrl,setSoundUrl] = useState('');
-     
-    useEffect(()=>{
+  
+  useEffect(() => {
+    fetch(`http://localhost:8000/house-config/${props.greenhouseId}`)
+    .then(res => res.json())
+    .then(json => {
+      
+    })
+  })
+
+  useEffect(()=>{
        fetch(`https://freesound.org/apiv2/sounds/${props.sourceId}/?token=B2giRt5IAiosOu6pvRcfAM4zpU8qDA2f37HBddB3`)
        .then(response => response.json())
        .then(json => {
@@ -33,7 +41,34 @@ function Slider(props) {
     props.setPresetLoaded(false);
     props.setSoundReset(false);
   }, [muted,volume,props.masterMuted,props.masterVolume]);
-
+  
+  let soundImg;
+  switch (props.soundImg){
+    case 'WeatherIcon':
+      soundImg = WeatherIcon;
+      break;
+    case 'BirdIcon':
+      soundImg = BirdIcon;
+      break;
+    case 'WindIcon':
+      soundImg = WindIcon;
+      break;
+    case 'WildLifeIcon':
+      soundImg = WildLifeIconIcon;
+      break;
+    case 'JungleIcon':
+      soundImg = JungleIcon;
+      break;
+    case 'NatureIcon':
+      soundImg = NatureIcon;
+      break;
+    case 'WaterIcon':
+      soundImg = WaterIcon;
+      break;
+    case 'InsectsIcon':
+      soundImg = InsectsIcon;
+      break;
+  }
   return (
     <div className="slider-main">
       

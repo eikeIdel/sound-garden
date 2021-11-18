@@ -1,9 +1,10 @@
-import { useState} from 'react';
+import { useState,useContext} from 'react';
 import Slider from "./slider";
 import "./sound-mixer.css";
 import { soundList } from "./soundList";
 import Mutebttn from "../button-icons/mute-bttn.png";
 import Unmutebttn from "../button-icons/unmuted-bttn.png";
+// import GreenhouseContext from '../greenhouse.jsx';
 
 
 function SoundMixer(props) {
@@ -12,27 +13,33 @@ const [masterMuted,setMasterMuted] = useState(false);
 const imgMuteSound = Unmutebttn;
 const imgPlaySound = Mutebttn;
 
+// const { greenhousePresets } = useContext(GreenhouseContext);
+
   return (
     <div className="sound-mixer-main">
      
      {/* <form> */}
 
-      {props.soundSelection.map(slectedSound =>
+      {props.greenhousePresets?.map(selectedSound =>
       
       <Slider 
-      name={Object.keys(slectedSound)[0]}
-      presetValue={slectedSound[Object.keys(slectedSound)[0]]}
+      // Database Source 
+      name={selectedSound.sound_name}
+      presetValue={selectedSound.sound_volume}
+      sourceId={selectedSound.source_id}
+      infoText={selectedSound.info_text}
+      soundImg={selectedSound.icon_name}
+      // States
       presetLoaded={props.presetLoaded}
       setPresetLoaded={props.setPresetLoaded}
-      sourceId={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['sourceId']}
-      infoText={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['infoText']}
-      soundImg={soundList[soundList.findIndex((soundObj) => soundObj.name === Object.keys(slectedSound)[0])]['img']}
       masterVolume={masterVolume}
       masterMuted={masterMuted}
-      imgMuteSound = {imgMuteSound}
-      imgPlaySound = {imgPlaySound}
       soundReset={props.soundReset}
       setSoundReset={props.setSoundReset}
+      //Images
+      imgMuteSound = {imgMuteSound}
+      imgPlaySound = {imgPlaySound}
+      
       />)}
       {/* </form> */}
       <h4>Master Volume:</h4>
@@ -50,7 +57,7 @@ const imgPlaySound = Mutebttn;
         <input
           className="master-slider"
           type="range"
-          name={props.name}
+          
           min={0}
           max={1}
           step={0.02}
