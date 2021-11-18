@@ -2,6 +2,14 @@ import { useState,useEffect,useRef } from 'react';
 import "./slider.css";
 import Infobttn from "../button-icons/info-bttn.png"
 import { soundList } from './soundList';
+import WeatherIcon from "../button-icons/weather_icon.png";
+import BirdIcon from "../button-icons/bird_icon.png";
+import WindIcon from "../button-icons/wind_icon.png";
+import WildlifeIcon from "../button-icons/wildlife_icon.png";
+import JungleIcon from "../button-icons/leaves_icon.png";
+import NatureIcon from "../button-icons/nature_icon.png";
+import WaterIcon from "../button-icons/water_icon2.png";
+import InsectsIcon from "../button-icons/insects_icon.png";
 
 function Slider(props) {
   const [volume, setVolume] = useState(0);
@@ -53,8 +61,8 @@ function Slider(props) {
     case 'WindIcon':
       soundImg = WindIcon;
       break;
-    case 'WildLifeIcon':
-      soundImg = WildLifeIconIcon;
+    case 'WildlifeIcon':
+      soundImg = WildlifeIcon;
       break;
     case 'JungleIcon':
       soundImg = JungleIcon;
@@ -105,7 +113,7 @@ function Slider(props) {
       />
       </div>
       <div className="sound-image-container">
-        <img className="sound-image" src={props.soundImg} alt="sound-image" />
+        <img className="sound-image" src={soundImg} alt="sound-image" />
         <p className="sound-image-text">{props.name}</p>
      </div>
       

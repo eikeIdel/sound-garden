@@ -36,7 +36,7 @@ export default function Navigation() {
                 <Greenhouse greenhouseId='4' houseName='House D - Orchids' soundSelection = {[{rain:0.2},{bird:0.7},{wind:0},{monkey:0},{crickets:0.7}]}/>          
                 </Route>
 
-                <Route path="/House_Rainforest">
+                <Route path="/HouseE_Rainforest">
                 <Greenhouse greenhouseId='5' houseName='House E - Rainforest' soundSelection = {[{rain:0},{jungle:0.7},{wind:0.3},{monkey:0.4},{thunder:0.2},{bird:0.1}]}/>               
                 </Route>
 
