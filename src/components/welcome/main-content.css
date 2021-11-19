@@ -1,34 +1,49 @@
-@media (min-width: 468px) {
-  body {
-    background-image: url("./assets/tropicalbg.jpeg");
-    background-repeat: no-repeat, repeat;
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: overlay;
-  }
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .welcome-content {
-    display: flex;
-    flex-direction: column;
-  }
+.image-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  .logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.logo img {
+  width: 520px;
+  height: 110px;
+  align-content: center;
+  margin-left: 4%;
+}
+
+@media (max-width: 500px) {
   .logo img {
-    width: 520px;
-    height: 110px;
+    width: 260px;
+    height: 55px;
     align-content: center;
     margin-left: 4%;
   }
-
-  .button-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  .image-section {
+    width: 300px;
+    height: 300px;
   }
+}
+@media (max-width: 300px) {
+  .image-section {
+    display: none;
+  }
+}
+
+.button-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .welcome-subtext {
@@ -40,8 +55,10 @@
   margin: 3%;
 }
 
-span {
+.button-text {
   display: none;
+  position: relative;
+  text-align: center;
 }
 
 .button {
@@ -55,7 +72,7 @@ span {
   text-align: center;
   font: bold 16px/100px Arial, sans-serif;
   text-transform: uppercase;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.5),
     inset 0 0 0 10px rgba(255, 255, 255, 0.3);
 }
@@ -68,6 +85,6 @@ span {
   box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.5),
     inset 0 0 0 100px rgba(0, 0, 0, 0.5);
 }
-.button:hover span {
+.button:hover .button-text {
   display: block;
 }

@@ -1,5 +1,7 @@
 import { useState,useEffect,useRef } from 'react';
 import "./slider.css";
+import Infobttn from "../button-icons/info-bttn.png"
+import { soundList } from './soundList';
 
 function Slider(props) {
   const [volume, setVolume] = useState(0);
@@ -34,25 +36,29 @@ function Slider(props) {
 
   return (
     <div className="slider-main">
-      
+    <div className="info-container"> 
       <div className="info-button">
         <img
-          src="https://via.placeholder.com/100x100?text=i"
+          className="info-image" 
+          src={Infobttn}
           alt="info-button"
           onClick={()=>alert(props.infoText)}
         />
       </div>
-
+      </div>
+     <div className="mute-container">
       <div className="mute-button">
-          <img
+        <img
+          className="mute-image" 
             src={muted ? props.imgPlaySound : props.imgMuteSound}
             alt="mute-button"
             onClick={()=>setMuted(!muted)}
           />
       </div>
-
+    </div>
       <audio src={soundUrl} ref={audioRef} loop></audio>
       
+      <div className="slider-container">
       <input 
         className="slider"
         type="range"
@@ -65,8 +71,11 @@ function Slider(props) {
           setVolume(event.target.value);
         }}
       />
-
-      <h6>{props.name}</h6>      
+      </div>
+      <div className="sound-image-container">
+        <img className="sound-image" src={props.soundImg} alt="sound-image" />
+        <p className="sound-image-text">{props.name}</p>
+     </div>
       
     </div>
     

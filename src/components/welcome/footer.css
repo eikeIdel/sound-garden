@@ -1,14 +1,13 @@
-@media (min-width: 468px) {
-  .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-  .footer_socialmedia {
-    display: flex;
-    justify-content: space-around;
-  }
+.footer_socialmedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .footer_socialmedia img {
@@ -27,7 +26,6 @@
 .footer_socialmedia-link:hover {
   opacity: 0.5;
 }
-
 
 .copyright {
   display: flex;
