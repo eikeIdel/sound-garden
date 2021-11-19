@@ -1,0 +1,89 @@
+
+  
+  #ScoreContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+  }
+  
+  #Score {
+    border: 1px solid black;
+    font-size: larger;
+    text-align: center;
+    padding: 2vh;
+    margin-bottom: 3vh;
+  }
+  
+  #btnRestart,
+  #btnLeave {
+    width: 45%;
+    margin: 0;
+    padding: 0;
+    font-size: larger;
+    padding: 2vh;
+    min-width: 30vh;
+  }
+  
+  button {
+
+    /* reset */
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+
+    /* style */
+
+    border: 1px solid black;
+    padding: 3vh;
+
+
+}
+
+#QuizContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+#Question,
+#Answers {
+    border: 1,5px solid black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 70vh;
+    text-align: center;
+}
+
+#Question,
+.btnAnswer {
+    width: 70vh;
+    height: 10vh;
+    justify-content: center;
+}
+
+#QuestionContainer,
+.btnAnswers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#QuestionContainer {
+    margin-bottom: 5vh;
+}
+
+.btnAnswer {
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+
+#leaveQuizLink {
+  color: inherit;
+  text-decoration: none;
+}
