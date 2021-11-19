@@ -1,7 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
-
-body {
+.welcome {
+  display: block;
   background-color: rgb(218, 230, 218);
-  font-family: "PT Sans Narrow", sans-serif;
-  font-size: 18px;
+  font-family: "Archivo Narrow", "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (min-width: 400px) {
+  .welcome {
+    background-image: url("../backgrounds/fernbg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
 }

@@ -7,15 +7,15 @@ import Footer from "./footer";
 function Welcome() {
   return (
     <div className="welcome">
-      <p className="header">
+      <div className="header">
         <Header />
-      </p>
-      <p className="main-content">
+      </div>
+      <div className="main-content">
         <MainContent />
-      </p>
-      <p className="footer">
+      </div>
+      <div className="footer">
         <Footer />
-      </p>
+      </div>
     </div>
   );
 }

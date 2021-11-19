@@ -1,42 +1,67 @@
+.MapBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(218, 230, 218);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
 #floor_map {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .Map {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #floor_map {
-    display: flex;
-    width: 60%;
-    margin: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 2vh;
+  /* margin-top: 10vh; */
 }
 
-@media only screen and (max-width: 700px) {
-    .Map {
-        transform: rotate(90deg);
-        margin-top: 25vh;
-    }
+@media only screen and (max-width: 600px) {
+  .Map {
+    transform: rotate(90deg);
+    width: 100%;
+  }
 
-    #floor_map {
-        width: 90%;
-        margin: 0vh;
-    }
+  #floor_map {
+    width: 100%;
+    margin: 0vh;
+  }
 }
 
 .House {
-    stroke: #306f91;
-    stroke-width: 1;
-    fill: ghostwhite;
-    opacity: 0%;
+  stroke: #306f91;
+  stroke-width: 1;
+  fill: ghostwhite;
+  opacity: 0%;
 }
 
 .House:hover {
-    opacity: 50%;
+  opacity: 50%;
 }
 
+@media (min-width: 400px) {
+  .MapBody {
+    background-image: url("../backgrounds/flowersbg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    height: 100%;
+  }
+}

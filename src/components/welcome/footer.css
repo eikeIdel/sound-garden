@@ -1,11 +1,38 @@
-body {
+.footer {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+}
+
+.footer_socialmedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer_socialmedia img {
+  width: 40px;
+}
+
+.footer_socialmedia-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 10%;
+  padding: 2%;
+  margin-top: 2%;
+}
+
+.footer_socialmedia-link:hover {
+  opacity: 0.5;
 }
 
 .copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   font-size: 12px;
+  margin-top: 1%;
 }
 
 .social-media-wrap {
