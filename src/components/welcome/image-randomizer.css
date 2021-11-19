@@ -14,9 +14,19 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 300px) {
+@media (max-width: 450px) {
+  .slide {
+    width: 320px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    border: 8px solid rgb(226, 212, 180);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  }
+
   .slide img {
-    width: 300px;
+    width: 320px;
     height: 300px;
   }
 }

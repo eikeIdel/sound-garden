@@ -3,8 +3,6 @@
   flex-direction: column;
   align-items: center;
   background-color: rgb(218, 230, 218);
-  width: 100%;
-  height: 100%;
 }
 
 .greenhouse-head {
@@ -23,8 +21,7 @@
 }
 
 .greenhouse-return-button:hover {
-  opacity: 0.3;
-  background-color: #6a8347;
+  opacity: 0.5;
 }
 
 .greenhouse-preset-button {
@@ -37,7 +34,11 @@
   width: 3rem;
 }
 
-@media (min-width: 400px), (min-height: 400px) {
+.greenhouse-reset-button:hover {
+  opacity: 0.5;
+}
+
+@media (min-width: 400px) {
   .greenhouse-main {
     background-image: url("../backgrounds/tropicalbg.jpeg");
     background-repeat: no-repeat;
@@ -45,5 +46,6 @@
     background-attachment: fixed;
     background-size: cover;
     background-blend-mode: overlay;
+    height: 100%;
   }
 }
