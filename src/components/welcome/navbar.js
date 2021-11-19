@@ -5,6 +5,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import logo from "./assets/logo_bo_small.png";
 import quiz from "./assets/quiz_icon.png";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import Quiz from "./quiz";
 
 const NavigationBar = () => {
   return (

@@ -17,10 +17,12 @@ export default function Navigation() {
                     <Map/>
                 </Route>
 
-                <Route path="/Quiz">
+
+                <Route path="/Map">
                     <Quiz/>
                 </Route>
-                
+
+
                 {/* START ROUTE FOR GREENHOUSES */}
 
                 <Route path="/HouseA_Tropical">

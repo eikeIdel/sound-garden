@@ -3,7 +3,7 @@ import './greenhouse.css'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { useState } from "react";
 import Returnbttn from "./button-icons/return-bttn.png"
-import Resetbttn from "./button-icons/reset-bttn.png"
+import Resetbttn from "./button-icons/reset-bttn2.png"
 import Presetbttn from "./button-icons/preset-bttn.png"
 import Play from "./Play";
 
