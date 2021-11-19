@@ -2,9 +2,10 @@ import SoundMixer from "./sound-mixer/sound-mixer";
 import './greenhouse.css'
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { useState } from "react";
-import Returnbttn from "./button-icons/return-bttn2.png"
+import Returnbttn from "./button-icons/return-bttn.png"
 import Resetbttn from "./button-icons/reset-bttn.png"
 import Presetbttn from "./button-icons/preset-bttn.png"
+import Play from "./Play";
 
 // import BGImage from "./bg-visual/background-image.js";
 
@@ -32,10 +33,9 @@ function Greenhouse(props) {
         
         <img className="greenhouse-reset-button" src={Resetbttn} alt="greenhouse-reset" onClick={()=>setSoundReset(true)}/>
        
+        <Play setPresetLoaded={setPresetLoaded} />
+       
 
-        <img className="greenhouse-preset-button" src={Presetbttn} alt="greenhouse-preset" onClick={()=>setPresetLoaded(true)}/>
-      
-              
 
       </div>
       
