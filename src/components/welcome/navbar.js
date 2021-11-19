@@ -15,7 +15,7 @@ const NavigationBar = () => {
             <Navbar.Brand href="https://www.bo.berlin/" target="_blank">
               <img className="bo-logo" src={logo} alt="Logo" width="50px" />
             </Navbar.Brand>
-            <Navbar.Brand href="/">
+            <Navbar.Brand href="/Quiz">
               <img className="quiz-icon" src={quiz} alt="Quiz" width="60px" />
             </Navbar.Brand>
             {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
