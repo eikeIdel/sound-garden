@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(218, 230, 218);
   width: 100%;
+  height: 100%;
 }
 
 .greenhouse-head {
@@ -11,9 +13,8 @@
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  width: 100%;
   background-color: #bbdca2;
-  padding: 0.7rem;
+  width: 100%;
 }
 
 .greenhouse-return-button {
@@ -21,10 +22,10 @@
   width: 3rem;
 }
 
-/* .greenhouse-return-button:hover{
-    opacity: 0.3;
-    background-color: #6A8347;
-} */
+.greenhouse-return-button:hover {
+  opacity: 0.3;
+  background-color: #6a8347;
+}
 
 .greenhouse-preset-button {
   width: 3rem;
@@ -34,4 +35,15 @@
 .greenhouse-reset-button {
   width: 3rem;
   width: 3rem;
+}
+
+@media (min-width: 400px), (min-height: 400px) {
+  .greenhouse-main {
+    background-image: url("../backgrounds/tropicalbg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
 }

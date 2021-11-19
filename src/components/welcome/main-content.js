@@ -23,6 +23,7 @@ const MainContent = () => {
         <Link to="/Map">
           <button className="button">
             <div className="button-img">
+              <p className="button-text">MAP</p>
               <img src={MapIcon} width="70px" />
             </div>
               <span>map</span>

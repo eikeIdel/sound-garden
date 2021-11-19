@@ -36,23 +36,26 @@ function Slider(props) {
 
   return (
     <div className="slider-main">
-      
+    <div className="info-container"> 
       <div className="info-button">
         <img
+          className="info-image" 
           src={Infobttn}
           alt="info-button"
           onClick={()=>alert(props.infoText)}
         />
       </div>
-
+      </div>
+     <div className="mute-container">
       <div className="mute-button">
-          <img
+        <img
+          className="mute-image" 
             src={muted ? props.imgPlaySound : props.imgMuteSound}
             alt="mute-button"
             onClick={()=>setMuted(!muted)}
           />
       </div>
-
+    </div>
       <audio src={soundUrl} ref={audioRef} loop></audio>
       
       <div className="slider-container">

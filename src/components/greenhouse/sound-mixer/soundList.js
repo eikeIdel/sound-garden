@@ -1,24 +1,25 @@
-import WeatherIcon from "../button-icons/weather_icon.png";
-import BirdIcon from "../button-icons/bird_icon.png";
-import WindIcon from "../button-icons/wind_icon.png";
-import WildlifeIcon from "../button-icons/wildlife_icon.png";
-import JungleIcon from "../button-icons/leaves_icon.png";
-import NatureIcon from "../button-icons/nature_icon.png";
-import WaterIcon from "../button-icons/water_icon2.png";
-import InsectsIcon from "../button-icons/insects_icon.png";
+import ThunderIcon from "../button-icons/sound-categories/thunderstorm_icon.png";
+import RainIcon from "../button-icons/sound-categories/rainstorm_icon.png";
+import BirdIcon from "../button-icons/sound-categories/bird_icon.png";
+import WindIcon from "../button-icons/sound-categories/wind_icon.png";
+import WildlifeIcon from "../button-icons/sound-categories/monkey_icon.png";
+import JungleIcon from "../button-icons/sound-categories/jungle_icon.png";
+import NatureIcon from "../button-icons/sound-categories/nature_icon.png";
+import WaterIcon from "../button-icons/sound-categories/water_icon.png";
+import InsectsIcon from "../button-icons/sound-categories/insects_icon.png";
 
 export const soundList = [
   {
     name: "thunder",
     sourceId: "454807",
     infoText: "Some placeholding fun-fact about thunder",
-    img: WeatherIcon,
+    img: ThunderIcon,
   },
   {
     name: "rain",
     sourceId: "243628",
     infoText: "Some placeholding fun-fact about rain",
-    img: WeatherIcon,
+    img: RainIcon,
   },
 
   {
