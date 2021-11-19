@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Greenhouse from '../greenhouse/greenhouse';
 import Welcome from '../welcome/welcome';
 import Map from '../07-08-map-responsive-layout';
+import Quiz from "../Quiz";
 
 export default function Navigation() {
     return (
@@ -16,9 +17,11 @@ export default function Navigation() {
                     <Map/>
                 </Route>
 
+
                 <Route path="/Map">
                     <Quiz/>
                 </Route>
+
 
                 {/* START ROUTE FOR GREENHOUSES */}
 

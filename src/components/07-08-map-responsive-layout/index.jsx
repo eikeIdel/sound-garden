@@ -1,6 +1,6 @@
 import floorMap from './images/map.png'
 import './styles.css'
-import { BrowserRouter as Router,Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 
 
